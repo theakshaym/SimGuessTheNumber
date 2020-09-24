@@ -4,6 +4,8 @@ import sys
 print('Welcome! What is your name?')
 name = input()
 rand = random.randint(1,20)
+
+#This checks for valid guess
 def rannum():
     print('well...,'+name+',I\'m thinking of a number between 1 to 20. Guess the number!')
     for guessTaken in range(1,7):
@@ -20,7 +22,7 @@ def rannum():
     else :
         print("The number was "+str(rand)+"! Better luck next time!")
 
-
+#Prompt function
 def yesorno():
     print('Hi, '+name+' are you ready to play the game? (y/n)')
     prom = input()
