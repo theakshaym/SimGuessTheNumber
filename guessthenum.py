@@ -4,11 +4,12 @@ import sys
 print('Welcome! What is your name?')
 name = input()
 rand = random.randint(1,20)
+attem = 6
 
 #This checks for valid guess
 def rannum():
     print('well...,'+name+',I\'m thinking of a number between 1 to 20. Guess the number!')
-    for guessTaken in range(1,7):
+    for guessTaken in range(attem):
         print('Take a guess...')
         guess = int(input())
         if guess < rand :
@@ -18,7 +19,7 @@ def rannum():
         elif guess == rand :
             break
     if guess == rand:
-        print("Congrats!"+name+", You guessed it in "+str(guessTaken)+" attempts!")
+        print("Congrats!"+name+", You guessed it in "+str(guessTaken+1)+" attempts!")
     else :
         print("The number was "+str(rand)+"! Better luck next time!")
 
