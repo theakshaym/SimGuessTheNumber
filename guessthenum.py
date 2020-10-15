@@ -1,14 +1,15 @@
 #This is a guess the number game!
 import random
 import sys
-print('Welcome! What is your name?')
-name = input()
-rand = random.randint(1,20)
+name = input('Welcome! What is your name?')
+lowerLimit = 1
+upperLimit = 20
+rand = random.randint(lowerLimit,upperLimit)
 attem = 6
 
 #This checks for valid guess
 def rannum():
-    print('well...,'+name+',I\'m thinking of a number between 1 to 20. Guess the number!')
+    print('well...,'+name+',I\'m thinking of a number between '+str(lowerLimit)+' and '+str(upperLimit)+'.')
     for guessTaken in range(attem):
         print('Take a guess...')
         guess = int(input())
@@ -25,8 +26,7 @@ def rannum():
 
 #Prompt function
 def yesorno():
-    print('Hi, '+name+' are you ready to play the game? (y/n)')
-    prom = input()
+    prom = input('Hi, '+name+' are you ready to play the game? (y/n)')
     if prom == 'y' or prom == 'Y':
         rannum()
     elif prom == 'n' or prom== 'N':
